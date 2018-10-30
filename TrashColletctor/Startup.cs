@@ -12,33 +12,33 @@ namespace TrashColletctor
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            createRoles();
+            CreateRoles();
+        }
+        private void CreateRoles()
+        {
+            ApplicationDbContext context = new ApplicationDbContext();
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+            if (!roleManager.RoleExists("Employee"))
+            {
+                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+                role.Name = "Employee";
+                roleManager.Create(role);
+            }
+            if (!roleManager.RoleExists("Customer"))
+            {
+                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+                role.Name = "Customer";
+                roleManager.Create(role);
+            }
         }
     }
-
-    private void createRoles()
-    {
-        ApplicationDbContext context = new ApplicationDbContext();
-        var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
-        if(!roleManager.RoleExists("Customer"))
-        {
-            var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-            role.Name = "Customer";
-            roleManager.Create(role);
-        }
-        if(!roleManager.RoleExists("Employee"))
-        {
-            var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-            role.Name = "Employee";
-            roleManager.Create(role);
-        }
-
-
-        //[assembly: OwinStartUpAttribute(typeof(Creating_And_Assigning_Roles))]
-        //namespace Creating_And_Assigning_Roles
-    
-
-    }
-   
-    
 }
+
+
+
+
+
+
+
+
+
