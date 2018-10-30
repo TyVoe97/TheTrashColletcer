@@ -1,5 +1,6 @@
 namespace TrashColletctor.Migrations
 {
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -18,6 +19,10 @@ namespace TrashColletctor.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+            context.Roles.AddOrUpdate(r => r.Name,
+        new IdentityRole { Name = "Employee" },
+        new IdentityRole { Name = "Customer" });
         }
+        
     }
 }

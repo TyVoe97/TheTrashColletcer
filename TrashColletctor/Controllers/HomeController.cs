@@ -10,21 +10,21 @@ namespace TrashColletctor.Controllers
     {
         public ActionResult Index()
         {
-            return View ("Index");
+            return View ();
         }
-
+        [Authorize(Roles = "Employee")]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 
-            return View("Index");
+            return View();
         }
-
+        [Authorize]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
 
-            return View("Index");
+            return View();
         }
     }
 }

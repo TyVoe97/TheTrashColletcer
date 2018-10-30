@@ -15,14 +15,14 @@ namespace TrashColletctor.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Employees
-        [HttpGet]
+        
         public ActionResult Index()
         {
             return View(db.Employee.ToList());
         }
 
         // GET: Employees/Details/5
-        [HttpGet]
+        
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -36,7 +36,7 @@ namespace TrashColletctor.Controllers
             }
             return View(employee);
         }
-        [HttpGet]
+       
         // GET: Employees/Create
         public ActionResult Create()
         {
@@ -61,7 +61,7 @@ namespace TrashColletctor.Controllers
         }
 
         // GET: Employees/Edit/5
-        [HttpGet]
+       
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -93,7 +93,7 @@ namespace TrashColletctor.Controllers
         }
 
         // GET: Employees/Delete/5
-        [HttpGet]
+       
         public ActionResult Delete(string id)
         {
             if (id == null)
