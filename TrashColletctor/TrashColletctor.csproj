@@ -210,6 +210,10 @@
     <Compile Include="Migrations\201810301226373_RolesEdit.Designer.cs">
       <DependentUpon>201810301226373_RolesEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810311255113_Zipcode.cs" />
+    <Compile Include="Migrations\201810311255113_Zipcode.Designer.cs">
+      <DependentUpon>201810311255113_Zipcode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -310,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810301226373_RolesEdit.resx">
       <DependentUpon>201810301226373_RolesEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810311255113_Zipcode.resx">
+      <DependentUpon>201810311255113_Zipcode.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
