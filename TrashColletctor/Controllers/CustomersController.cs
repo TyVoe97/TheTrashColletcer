@@ -123,5 +123,6 @@ namespace TrashColletctor.Controllers
             }
             base.Dispose(disposing);
         }
+    
     }
 }

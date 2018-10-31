@@ -38,9 +38,10 @@ namespace TrashColletctor.Controllers
         }
        
         // GET: Employees/Create
+        [HttpGet]
         public ActionResult Create()
         {
-            return View("Index");
+            return View();
         }
 
         // POST: Employees/Create
