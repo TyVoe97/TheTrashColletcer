@@ -10,8 +10,10 @@ using TrashColletctor.Models;
 
 namespace TrashColletctor.Controllers
 {
+
     public class CustomersController : Controller
     {
+
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Customers

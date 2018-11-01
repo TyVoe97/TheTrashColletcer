@@ -202,21 +202,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201810291449206_TrashCollecter.cs" />
-    <Compile Include="Migrations\201810291449206_TrashCollecter.Designer.cs">
-      <DependentUpon>201810291449206_TrashCollecter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201810301226373_RolesEdit.cs" />
-    <Compile Include="Migrations\201810301226373_RolesEdit.Designer.cs">
-      <DependentUpon>201810301226373_RolesEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201810311255113_Zipcode.cs" />
-    <Compile Include="Migrations\201810311255113_Zipcode.Designer.cs">
-      <DependentUpon>201810311255113_Zipcode.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201811011526216_UserName.cs" />
-    <Compile Include="Migrations\201811011526216_UserName.Designer.cs">
-      <DependentUpon>201811011526216_UserName.cs</DependentUpon>
+    <Compile Include="Migrations\201811011944489_initial migratin.cs" />
+    <Compile Include="Migrations\201811011944489_initial migratin.Designer.cs">
+      <DependentUpon>201811011944489_initial migratin.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -313,17 +301,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810291449206_TrashCollecter.resx">
-      <DependentUpon>201810291449206_TrashCollecter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810301226373_RolesEdit.resx">
-      <DependentUpon>201810301226373_RolesEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810311255113_Zipcode.resx">
-      <DependentUpon>201810311255113_Zipcode.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811011526216_UserName.resx">
-      <DependentUpon>201811011526216_UserName.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201811011944489_initial migratin.resx">
+      <DependentUpon>201811011944489_initial migratin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -3,7 +3,7 @@ namespace TrashColletctor.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class TrashCollecter : DbMigration
+    public partial class initialmigratin : DbMigration
     {
         public override void Up()
         {
@@ -11,24 +11,30 @@ namespace TrashColletctor.Migrations
                 "dbo.Customers",
                 c => new
                     {
-                        fristName = c.String(nullable: false, maxLength: 128),
+                        Id = c.Int(nullable: false, identity: true),
+                        firstName = c.String(),
                         lastName = c.String(),
+                        Zipcode = c.Int(nullable: false),
+                        PhoneNumber = c.Int(nullable: false),
                         email = c.String(),
                         password = c.String(),
+                        Address = c.String(),
+                        UserName = c.String(),
                     })
-                .PrimaryKey(t => t.fristName);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Employees",
                 c => new
                     {
-                        firstName = c.String(nullable: false, maxLength: 128),
+                        Id = c.Int(nullable: false, identity: true),
+                        firstName = c.String(),
                         lastName = c.String(),
                         emplyeeId = c.Int(nullable: false),
                         email = c.String(),
                         password = c.String(),
                     })
-                .PrimaryKey(t => t.firstName);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.AspNetRoles",
@@ -58,6 +64,7 @@ namespace TrashColletctor.Migrations
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
+                        UserRole = c.String(),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),
                         PasswordHash = c.String(),
