@@ -9,14 +9,14 @@ namespace TrashColletctor.Models
     public class Customer
     {
         [Key]
-        public string fristName { get; set; }
+        public string firstName { get; set; }
         public string lastName { get; set; }
         public int Zipcode { get; set; }
         public int PhoneNumber { get; set; }
         public string email { get; set; }
         public string password { get; set; }
         public string Address { get; set; }
-        
+        public string UserName { get; set; }
 
     }
     public class Employee

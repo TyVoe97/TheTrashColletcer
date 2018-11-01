@@ -17,7 +17,7 @@ namespace TrashColletctor.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            return View(db.Costomer.ToList());
+            return View(db.Customer.ToList());
         }
 
         // GET: Customers/Details/5
@@ -27,7 +27,7 @@ namespace TrashColletctor.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Costomer.Find(id);
+            Customer customer = db.Customer.Find(id);
             if (customer == null)
             {
                 return HttpNotFound();
@@ -50,7 +50,7 @@ namespace TrashColletctor.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Costomer.Add(customer);
+                db.Customer.Add(customer);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace TrashColletctor.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Costomer.Find(id);
+            Customer customer = db.Customer.Find(id);
             if (customer == null)
             {
                 return HttpNotFound();
@@ -96,7 +96,7 @@ namespace TrashColletctor.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Costomer.Find(id);
+            Customer customer = db.Customer.Find(id);
             if (customer == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace TrashColletctor.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            Customer customer = db.Costomer.Find(id);
-            db.Costomer.Remove(customer);
+            Customer customer = db.Customer.Find(id);
+            db.Customer.Remove(customer);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
