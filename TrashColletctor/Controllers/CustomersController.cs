@@ -23,7 +23,7 @@ namespace TrashColletctor.Controllers
         }
 
         // GET: Customers/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -48,7 +48,7 @@ namespace TrashColletctor.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "fristName,lastName,email,password")] Customer customer)
+        public ActionResult Create([Bind(Include = "firstname, lastname, Zipcode,Address,PhoneNumber,email,Password,UserName")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -61,7 +61,7 @@ namespace TrashColletctor.Controllers
         }
 
         // GET: Customers/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -80,7 +80,7 @@ namespace TrashColletctor.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "fristName,lastName,email,password")] Customer customer)
+        public ActionResult Edit([Bind(Include = "Id,firstName,lastName,email,password,zipcode,address,phonenumber,username")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -92,7 +92,7 @@ namespace TrashColletctor.Controllers
         }
 
         // GET: Customers/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -109,7 +109,7 @@ namespace TrashColletctor.Controllers
         // POST: Customers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int? id)
         {
             Customer customer = db.Customer.Find(id);
             db.Customer.Remove(customer);

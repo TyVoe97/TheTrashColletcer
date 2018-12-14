@@ -23,7 +23,7 @@ namespace TrashColletctor.Controllers
 
         // GET: Employees/Details/5
         
-        public ActionResult Details(string id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -49,7 +49,7 @@ namespace TrashColletctor.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "firstName,lastName,emplyeeId,email,password")] Employee employee)
+        public ActionResult Create([Bind(Include = "firstName,lastName,employeeId,email,password")] Employee employee)
         {
             if (ModelState.IsValid)
             {
@@ -63,13 +63,13 @@ namespace TrashColletctor.Controllers
 
         // GET: Employees/Edit/5
        
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Employee employee = db.Employee.Find(id);
+            Employee employee= db.Employee.Find(id);
             if (employee == null)
             {
                 return HttpNotFound();
@@ -95,7 +95,7 @@ namespace TrashColletctor.Controllers
 
         // GET: Employees/Delete/5
        
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -112,7 +112,7 @@ namespace TrashColletctor.Controllers
         // POST: Employees/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int? id)
         {
             Employee employee = db.Employee.Find(id);
             db.Employee.Remove(employee);

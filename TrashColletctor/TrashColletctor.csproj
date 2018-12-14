@@ -206,6 +206,18 @@
     <Compile Include="Migrations\201811011944489_initial migratin.Designer.cs">
       <DependentUpon>201811011944489_initial migratin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811021224371_update.cs" />
+    <Compile Include="Migrations\201811021224371_update.Designer.cs">
+      <DependentUpon>201811021224371_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812132021194_string.cs" />
+    <Compile Include="Migrations\201812132021194_string.Designer.cs">
+      <DependentUpon>201812132021194_string.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812132130096_Thing.cs" />
+    <Compile Include="Migrations\201812132130096_Thing.Designer.cs">
+      <DependentUpon>201812132130096_Thing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -303,6 +315,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201811011944489_initial migratin.resx">
       <DependentUpon>201811011944489_initial migratin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811021224371_update.resx">
+      <DependentUpon>201811021224371_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812132021194_string.resx">
+      <DependentUpon>201812132021194_string.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812132130096_Thing.resx">
+      <DependentUpon>201812132130096_Thing.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

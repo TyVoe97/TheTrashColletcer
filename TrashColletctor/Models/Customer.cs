@@ -32,13 +32,13 @@ namespace TrashColletctor.Models
     public class Employee
     {
         [Key]
-        public int Id { get; set; }
+        public int? Id { get; set; }
         [Display(Name = " First Name")]
         public string firstName { get; set; }
         [Display(Name = "Last Name")]
         public string lastName { get; set; }
         [Display(Name = "Employee Id")]
-        public int emplyeeId { get; set; }
+        public int employeeId { get; set; }
         [Display(Name = "Email")]
         public string email { get; set; }
         [Display(Name = "Password")]
